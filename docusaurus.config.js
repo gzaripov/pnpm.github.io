@@ -1,7 +1,7 @@
 const path = require('path');
 const progress = require("./scripts/progress_lang.json");
 
-const GITHUB_URL = 'https://github.com/pnpm/pnpm';
+const GITHUB_URL = 'https://github.com/gzaripov/pnpm.github.io';
 const GITHUB_SPONSOR_URL = 'https://github.com/sponsors/pnpm';
 const SPONSOR_URL = 'https://opencollective.com/pnpm';
 const TRANSLATE_URL = "https://crowdin.com/project/pnpm";
@@ -31,7 +31,7 @@ module.exports={
   "tagline": "Fast, disk space efficient package manager",
   "url": "https://pnpm.io",
   "baseUrl": "/",
-  "organizationName": "pnpm",
+  "organizationName": "gzaripov",
   "projectName": "pnpm.github.io",
   "scripts": [
     "https://buttons.github.io/buttons.js",
@@ -84,14 +84,6 @@ module.exports={
     ],
   ],
   "themeConfig": {
-    announcementBar: {
-      id: 'support_ukraine',
-      content:
-        '<a target="_blank" rel="noopener noreferrer" href="https://war.ukraine.ua/support-ukraine/">Support Ukraine 🇺🇦</a>',
-      backgroundColor: '#20232a',
-      textColor: '#fff',
-      isCloseable: false,
-    },
     "prism": {
       theme: require('prism-react-renderer/themes/github'),
       darkTheme: require('prism-react-renderer/themes/dracula'),
@@ -102,10 +94,6 @@ module.exports={
         "src": "img/pnpm-no-name-with-frame.svg"
       },
       "items": [
-        {
-          href: 'https://war.ukraine.ua/support-ukraine/',
-          image: 'https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg',
-        },
         {
           "to": "motivation",
           "label": "Docs",
@@ -266,29 +254,10 @@ module.exports={
   },
   i18n: {
     defaultLocale: DEFAULT_LOCALE,
-    locales: LOCALE_CI ? [LOCALE_CI] : ['en', 'it', 'zh', 'ja', 'ko', 'pt', 'ru', 'fr', 'tr', 'es', 'zh-TW', 'id'],
+    locales: LOCALE_CI ? [LOCALE_CI] : ['en', 'ru'],
     localeConfigs: {
       en: { label: "English" },
-      it: { label: `Italiano (${progress["it"].translationProgress}%)` },
-      zh: { label: `简体中文 (${progress["zh-CN"].translationProgress}%)` },
-      "zh-TW": {
-        label: `正體中文 (${progress["zh-TW"].translationProgress}%)`,
-      },
-      ja: { label: `日本語 (${progress["ja"].translationProgress}%)` },
-      ko: { label: `한국어 (${progress["ko"].translationProgress}%)` },
-      pt: {
-        label: `Português Brasileiro (${progress["pt-BR"].translationProgress}%)`,
-      },
-      ru: { label: `Русский (${progress["ru"].translationProgress}%)` },
-      fr: { label: `Français (${progress["fr"].translationProgress}%)` },
-      tr: { label: `Türkçe (${progress["tr"].translationProgress}%)` },
-      es: { label: `Español (${progress["es-ES"].translationProgress}%)` },
-      id: {
-        label: `Bahasa Indonesia (${progress["id"].translationProgress}%)`,
-      },
-      hu: { label: `Magyar (${progress["hu"].translationProgress}%)` },
-      pl: { label: `Polski (${progress["pl"].translationProgress}%)` },
-      de: { label: `Deutsch (${progress["de"].translationProgress}%)` },
+      ru: { label: `Русский (${progress["ru"].translationProgress}%)` }
     },
   },
 }
